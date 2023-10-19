@@ -1,5 +1,5 @@
 const secure = require("./secure");
-const gameLogic = require("./gameLogic");
+const whoWon = require("./whoWon");
 const helpTable = require("./helpTable");
 const prompts = require("prompts");
 
@@ -45,7 +45,7 @@ async function game() {
       const playerMove = moves[response.value - 1];
       console.log(`Your move: ${playerMove}`);
       console.log(`PC move: ${computerMove}`);
-      const result = gameLogic.userStatus(moves, computerMove, playerMove);
+      const result = whoWon.userStatus(moves, computerMove, playerMove);
       console.log(`You ${result}`);
       console.log(`HMAC key: ${key}`);
    }
