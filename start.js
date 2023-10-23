@@ -39,7 +39,7 @@ async function game() {
 
    if (response.value === 0) process.exit(0);
    else if (response.value === "?") {
-      console.log(helpTable.infoTable(moves));
+      console.log(helpTable.getInfoTable(moves));
       game();
    } else {
       const playerMove = moves[response.value - 1];
